@@ -1,0 +1,57 @@
+.cabecalho_menu-hamburguer{ /* essa opção eu ainda nao endendi***/
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between; /* E isso acontece, porque o display flex, ele transformou o cabeçalho em um flex container, e seus filhos que no caso ficou as divs containers, eles viraram flex items, e com isso é liberado várias coisas novas para fazermos com css, que são essas propriedades, tipo o justify-content, que ele colocou cada container em um canto. Ele separa cada elemento com o mesmo espaço entre eles, como só tem 2, então ele jogou um para cada canto. */
+    align-items: center;
+    position: relative; /*O position relative, ele libera a opção de você botar outros atributos como top, left, right, bottom */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container-img{
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none; /* sumiu a lista do menu, mas Pq?*/
+    position: absolute; /*position absolute, ele permite que você movimente o seu elemento de acordo com outro que veio antes, ou que é o pai, que esteja a position diferente de static que é a padrão*/
+    top: 100%;
+    width: 60vw;/* parte do fundo do menu ficou 60%*/
+}
+
+.container-botao:checked~.lista-menu{
+    display: block;
+
+}
+
+.lista-menu_titulo, .lista-menu_item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu_titulo{
+    color: var(--cor-do-botao);
+    font-weight: 700;
+}
+
+.lista-menu_link{
+    background: var(--azul-principal);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    text-transform: uppercase;/*Deixar tudo maiusculo*/
+}
+.container-botao{
+    display: none;
+}

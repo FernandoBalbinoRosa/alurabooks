@@ -1,0 +1,5 @@
+.banner{
+    background:var(--azul-principal);
+    color: var(--branco);
+    text-align: center;
+}

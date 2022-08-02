@@ -1,0 +1,19 @@
+@import url("style/header.css");/* Essa opção é interessante pois não deixa carregado de links css no index e tambem permite um carregamento da pagina mais rapito, pois não precisa ir até o index importar.*/
+
+@import url("style/banner.css");
+
+:root{
+    --cor-de-fundo:  #EBECEE;
+    --branco: #FFFFFF; 
+    --azul-principal: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --cor-do-botao: #EB9B00;
+    --font-pdrao: 'Poppins'
+
+}
+
+body{
+    background: var(--cor-de-fundo);
+    font-family: var(--font-pdrao);
+    font-size: 16px;
+    font-weight: 400;
+}
